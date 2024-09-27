@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGL Color Change</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0; /* Background yang lebih cerah */
+        }
+
+        .container{
+            border: 2px solid #333; /* Border untuk kotak pembungkus */
+            border-radius: 40px;
+            padding: 20px; /* Jarak di dalam kotak */
+            display: flex; /* Menggunakan flexbox */
+            flex-direction: column; /* Mengatur arah flex menjadi kolom */
+            align-items: center; /* Memusatkan item secara horizontal */
+        }
+
+        canvas {
+            border: 1px solid black; /* Border untuk canvas */
+            border-radius: 30px;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 25px;
+        }
+
+        .red:hover{
+            background-color: red;
+        }
+
+        .yellow:hover{
+            background-color: yellow;
+        }
+
+        .blue:hover{
+            background-color: blue;
+        }
+        
+        .reset:hover{
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <canvas id="glCanvas" width="600" height="400"></canvas>
+        <div>
+            <button class="red" id="redButton">Merah</button>
+            <button class="yellow" id="yellowButton">Kuning</button>
+            <button class="blue" id="blueButton">Biru</button>
+            <button class="reset" id="resetButton">Reset</button>
+        </div>
+    </div>
+    
+    <script type="module" src="script.js"></script>
+</body>
+</html>
